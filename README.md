@@ -17,7 +17,6 @@ This repository is the **data-mining track** of a two-track selection package. T
 | The verified pilot evidence and corrections | [`research_audit/round9/FINAL_SURVIVORS_REVIEW.md`](research_audit/round9/FINAL_SURVIVORS_REVIEW.md) |
 | The six gate reports | [`research_audit/round10/`](research_audit/round10/) |
 | The running verdict tracker | [`research_audit/TRACK.md`](research_audit/TRACK.md) |
-| Reusable research prompts | [`prompts/`](prompts/) |
 
 ---
 
@@ -39,6 +38,22 @@ Scores use the Round-8 eight-factor rubric: Novelty 25%, Method 20%, Math 15%, E
 
 ---
 
+## Idea pages
+
+Each page has the same sections: **What / Why / How / Dataset / Method / Expected / Results / Outcome**.
+
+| Idea | Page |
+|---|---|
+| E2 — fixed-prefix tool-observation sensitivity | [`02_e2_cto.md`](research_audit/round10/ideas/02_e2_cto.md) |
+| RANKCAL — rank vs. calibration level | [`04_rankcal.md`](research_audit/round10/ideas/04_rankcal.md) |
+| R1 — causal retrieval lift (scoped) | [`03_r1_retrieval.md`](research_audit/round10/ideas/03_r1_retrieval.md) |
+| E1 — multi-turn constraint retention | [`05_e1_turn_decay.md`](research_audit/round10/ideas/05_e1_turn_decay.md) |
+| Tool-IV — encouragement effect of tool use | [`06_tool_iv.md`](research_audit/round10/ideas/06_tool_iv.md) |
+| M1 — Bangla native-to-romanized transfer | [`07_m1_script.md`](research_audit/round10/ideas/07_m1_script.md) |
+| T1 — watermark detectability under paraphrase | [`01_t1_watermark.md`](research_audit/round10/ideas/01_t1_watermark.md) |
+
+---
+
 ## What is inside
 
 ```
@@ -52,10 +67,6 @@ research_audit/
 ├── TRACK.md
 ├── HIGH_SCORE_IDEAS_MEMORY.md
 └── RESEARCH_SELECTION_PACKAGE.md
-prompts/
-├── Research_Novelty_Investigation_Master_Prompt.md
-├── CLAUDE_IDEA_SEARCH_PROMPT.md
-└── TEAM_IDEA_VALIDATION_PROMPT.md
 ```
 
 Each idea page uses **What / Why / How / Dataset / Method / Expected / Results / Outcome**. The “Outcome” line is the decision.
