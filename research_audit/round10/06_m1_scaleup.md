@@ -162,7 +162,7 @@ The 30/30 AI check certifies only that `fix_roman.py` is deterministic and schem
 
 **Acceptance:** ≥95% of sampled items rated meaning ≥4/5 by both annotators; label-changing ambiguity ≤2%; α ≥ .67; back-transliteration ≥90%. Failures trigger one revision round; a second failure is Gate G0.
 
-**Cost:** 900×2×$0.10 = $180; 500 human romanizations × $0.15 = $75; 500 back-transliterations × $0.10 = $50; adjudication ≈ $15 → **≈$320**. Minimum tier (300-item audit, 200 human romanizations) ≈ $70–90. The compute budget does not cover this; it is the real gate. If it cannot be funded, frame the paper as "machine-audited corpus" and submit to a venue that accepts that — do not claim native validation.
+**Cost:** The native review is team-run: 900×2 ratings, 500 human romanizations, 500 back-transliterations, and adjudication are ~8–10 person-days, with **$0 cash cost**. The cash budget is only GPU rental ($16–34) and storage. If the team lacks native Bangla speakers, native review remains a validity gate, not a cash line.
 
 ---
 
@@ -185,11 +185,11 @@ The interim look is used only for **variance components** (π_d, ICC, σ_seed) t
 ## 8. Path, timeline, budget
 
 1. **Now, CPU ($0):** build the 9k corpus; run the machine audit; write and hash the pre-registration (estimands, split, arms, analysis code, decision tree).
-2. **Native review (~$320, 2–3 weeks):** Gate G0. **Do not rent a GPU before this closes.**
+2. **Native review (team-run, 2–3 weeks):** Gate G0. **Do not rent a GPU before this closes.**
 3. **Interim (6 runs: size curve at 500/1,500 + 2 seeds of A at 4,500, ~5 h, ~$2):** operating point, G2, G4, G1 futility; lock π_d, ICC, σ_seed.
 4. **Confirmation (10 remaining core runs + 4 conditional dose, ~25–40 GPU-h, ~$12–18):** primary endpoints.
 5. **Mechanism (inference only, ~2 h):** R1/R2/R3 on 2,000 items + human-written subset.
-6. **Analysis and paper.** Total ≈5–7 weeks, ≈$340–355 cash (annotation dominant), 52–76 GPU-h.
+6. **Analysis and paper.** Total ≈5–7 weeks, ≈$16–34 cash (GPU only), 52–76 GPU-h; native review is team time.
 
 **Publication decision tree**
 
@@ -223,4 +223,4 @@ The interim look is used only for **variance components** (π_d, ICC, σ_seed) t
 
 **Stop.** G0 native review fails (>2% label-changing ambiguity) → no GPU. G1 interim gap <2 pp → publish scale-closure, stop method. G2 dev accuracy outside 45–92% → fix difficulty. G3 B−A ≤0 with placebo matching → stop alignment. G4 zero-shot 7B gap <1 pp → small-model artifact. Hard cap 80 GPU-h / $70.
 
-**Path.** Corpus + native audit (~$320) → 5 h interim (6 runs) → 10-run confirmation (~$15) → mechanism inference → paper.
+**Path.** Corpus + native audit (team-run) → 5 h interim (6 runs) → 10-run confirmation (~$15) → mechanism inference → paper.

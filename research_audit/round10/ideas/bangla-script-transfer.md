@@ -47,7 +47,7 @@ Pilot (Qwen2.5-1.5B, 200 IndicXNLI-Bengali pairs, 4-bit LoRA):
 
 The direction is positive, but the pilot’s 110 “cells” are **89 unique items in 7 source groups**; the two seeds test different groups (only 21/89 items overlap). Seed 42 gap=19.57pp; seed 1234 gap=6.25pp. Cluster-bootstrap 95% CI: **[0.35, 25.06]pp**; honest MDE80 ≈ **22–32pp**. The InfoNCE used batch 2, so each anchor’s only negative was itself — an attract-only loss, not contrastive. The 30/30 romanization check was mechanical conformance, not native-speaker validation.
 
-**Gate F:** proceed as an empirical paper only. At 9k/7B, the script-gap MDE90 is **3.4–3.9pp**; alignment MDE90 is **3.6–4.8pp**. The native audit costs ≈ **$320**; total ≈$340–355 and 52–76 GPU-hours. The \(\eta\) theorem is dropped from the claim set.
+**Gate F:** proceed as an empirical paper only. At 9k/7B, the script-gap MDE90 is **3.4–3.9pp**; alignment MDE90 is **3.6–4.8pp**. The native audit is **team-run** (no cash cost; ~8–10 person-days); total cash ≈**$16–34** for GPU and storage, 52–76 GPU-hours. The \(\eta\) theorem is dropped from the claim set.
 
 ## Outcome
 

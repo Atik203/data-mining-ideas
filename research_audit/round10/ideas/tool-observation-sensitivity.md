@@ -51,7 +51,7 @@ This is a screening signal, not a dose-response law. The pilot is small, uses on
 
 **Gate C design (8 Nov):** GO, staged. N=800 gives an MDE of **0.20 logit/level per model** (OR 1.22), 80% power; pooled ≤0.15. The pilot-implied \(b\approx0.8\) gives >99% power if the direction survives real prefixes. With 160–240 s=3 switchers, the per-model recovery half-life CI is ±16–20%, pooled ±9–11%; model/severity ranking needs 32–50% differences and is explicitly out of scope.
 
-**Cost:** 35–45 GPU-hours on a 24GB rental ($15–22), $2–3 storage, $40 annotation, **$63 base / $70 hard cap**. No paid API.
+**Cost:** 35–45 GPU-hours on a 24GB rental ($15–22), $2–3 storage, **$0 annotation** (team-run), **$23 base / $70 hard cap**. No paid API.
 
 ## Outcome
 

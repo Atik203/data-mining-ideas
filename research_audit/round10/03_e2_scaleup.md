@@ -12,7 +12,7 @@
 - **Slope power:** MDE **0.20 logit/level per model** at N=800 (OR 1.22), 80% power, α=.05 two-sided; pooled across models ≤0.15 (conservative 0.20). The pilot-implied b≈0.8 is ~4× the MDE, so the slope test has >99% power if the pilot direction survives real prefixes.
 - **Recovery power:** with a 20% switch rate at s=3, 160 switchers/model; 95% CI on t½ **±20% per model, ±11% pooled**. Between-model and between-severity t½ differences need **32–50%**; the study estimates a half-life, it does not rank models.
 - **Harvest supply is not the risk:** the public τ-bench historical trajectories contain **13,605** candidate post-tool decision points; after excluding profile/PII tools and retaining observations whose values appear in the donor’s continuation (value-used proxy), **6,554** remain across all **165** task–domain pairs (min 7, median 38; airline median 31). A cap of 10/task yields 1,646; the airline arm is the binding constraint (50 tasks × 10 = 496 max, enough for 400). 800 is feasible.
-- **Cost:** 35–45 GPU-hours on a 24GB rental (**$15–22**), storage **$2–3**, one paid annotator **$40**, contingency **$3–5**; **base $63, hard cap $70**.
+- **Cost:** 35–45 GPU-hours on a 24GB rental (**$15–22**), storage **$2–3**, contingency **$3–5**; **base $23, hard cap $70**. Human labeling is done by the team at no cash cost.
 - **Gates:** G0 harvest ≥880 eligible + 40-item audit ≥90%; G1 calibration parse ≥95%, placebo jitter ≤20%, s=3 switch 10–80%; G2 stop at $22/45 GPU-hours; G3 slope replicated in ≥2/3 models; G4 ≥50% recovery events and exponential not rejected.
 
 ---
@@ -179,7 +179,7 @@ The τ-bench tasks are public and may be in the target models’ training data. 
 
 ### 4.2 Outcome labels
 
-- **Sample:** 160 responses, stratified 3 models × 4 levels (≈13/cell), 2 raters (paid annotator + author), blind to arm.
+- **Sample:** 160 responses, stratified 3 models × 4 levels (≈13/cell), 2 raters (two blind co-authors), blind to arm.
 - **Labels:** same / silent propagation / flagged / action switch / other; adjudicate disagreements.
 - **Pass criteria:** Cohen’s κ ≥ .80 for the 4-way label; PPV of automatic “silent propagation” ≥ .90; parser failure <1%; 10% seed-repeat label stability ≥ .90.
 - **Failure:** if κ < .70 after one rubric revision, downgrade to action-level Y^A only; the content-sensitivity claim is not made. If .70 ≤ κ < .80, report both automatic and adjudicated analyses with the adjudicated result as primary on the audit subsample.
@@ -188,9 +188,9 @@ The τ-bench tasks are public and may be in the target models’ training data. 
 
 - 80 recovery sequences (40 R1, 40 R2/censored), 2 raters; 3-way label (corrected / flagged / still wrong); κ ≥ .75. Disagreements adjudicated; the automatic signature match is the primary, human labels validate it.
 
-### 4.4 Annotation cost and blinding
+### 4.4 Annotation and blinding
 
-One paid annotator handles 160 outcome items + 40 severity items (≈200 judgments × 2.5 min = 8.3 h at $5/h ≈ $40). The author and two co-authors do the remaining severity/recovery ratings unpaid. All raters are blind to arm labels; the paid annotator sees only the response and the rubric, not the perturbation record. The $5/h rate assumes a local research-assistant market; if only higher-cost annotators are available, use two blind co-authors and redirect the $40 to the optional 3B model or the template-transfer arm.
+Two blind co-authors handle the 160 outcome items + 40 severity items (≈200 judgments × 2.5 min = 8.3 h of team time). There is no cash annotation cost. All raters are blind to arm labels; the second rater sees only the response and the rubric, not the perturbation record. A third co-author adjudicates disagreements.
 
 ---
 
@@ -264,9 +264,9 @@ Average prompt ≈2,500 tokens (system policy + history + observation); output �
 |---|---|---:|
 | GPU rental | 35–45 h, 24GB, $0.30–0.50/h | $15–22 |
 | Storage/egress | 60GB weights + logs | $2–3 |
-| Annotation | 200 judgments, 1 paid rater, $5/h | $40 |
-| Contingency | GPU/storage overrun, top-up labels | $3–5 |
-| **Total** | base assumes $18 GPU, $2 storage, $3 contingency | **$63 base / $70 cap** |
+| Annotation | 200 judgments, team members | $0 |
+| Contingency | GPU/storage overrun | $3–5 |
+| **Total** | base assumes $18 GPU, $2 storage, $3 contingency | **$23 base / $70 cap** |
 
 No paid API, no second GPU, no HF download in this CPU gate. The rental downloads the three open-weight models once; storage/bandwidth is included.
 
@@ -307,7 +307,7 @@ A flat slope (β≤0.1) in all models; a negative slope; placebo jitter >20%; s=
 5. **Outcome label noise.** Deterministic slot matching + 160-item double-coding + 10% seed repeats. If κ is low, downgrade to action-level.
 6. **Recovery model.** Exponential is a strong assumption; Weibull shape test and RMST are pre-registered. Transient vs persistent separates re-query from correction.
 7. **Model coverage.** Three 7–8B families, not frontier models; the law may not transfer. State the scope explicitly.
-8. **Annotation independence.** One paid rater + author/co-authors; blind to arm. If the paid rater is unavailable, the fallback is two blind co-authors, with the cash moved to a fourth model; the κ target stays.
+8. **Annotation independence.** Two blind co-authors; the second sees only the response and the rubric. No external rater.
 9. **Multiple comparisons.** Fixed-sequence gate; heterogeneity exploratory; no post-hoc model ranking.
 
 ---
@@ -324,7 +324,7 @@ A flat slope (β≤0.1) in all models; a negative slope; placebo jitter >20%; s=
 
 **Deliverables:** (i) CTO-800, a fixed-prefix counterfactual observation dataset with perturbation records, real outputs, continuations, and recovery traces; (ii) a confirmatory paper on content sensitivity and recovery, with a pre-registered analysis. If the slope is null, the dataset and the null are still publishable; if the slope replicates, the paper’s claim is the graded content-sensitivity law, not a universal constant.
 
-**Study elapsed:** 2–3 weeks full-time; **cash $63 base, $70 cap**.
+**Study elapsed:** 2–3 weeks full-time; **cash $23 base, $70 cap**.
 
 ---
 
@@ -336,7 +336,7 @@ A flat slope (β≤0.1) in all models; a negative slope; placebo jitter >20%; s=
 
 **MDE.** N=800 gives 0.20 logit/level per model (OR 1.22), 80% power; pooled ≤0.15; pilot-implied b≈0.8 gives >99% power. Recovery with 160–240 s=3 switchers: per-model t½ 95% CI ±16–20%, pooled ±9–11%; between-model/severity differences need 32–50%, so no ranking claim.
 
-**Cost.** 35–45 GPU-hours on a 24GB rental ($15–22), $2–3 storage, $40 annotation, $63 base/$70 cap; no paid API.
+**Cost.** 35–45 GPU-hours on a 24GB rental ($15–22), $2–3 storage, $0 annotation (team), $23 base/$70 cap; no paid API.
 
 **Gates.** G0 harvest ≥880 eligible, ≥440/domain before audit and ≥400/domain after audit, 40-item audit ≥90%; G1 parse ≥95%, jitter ≤20%, s=3 switch 10–80%; G2 stop at $22/45h; G3 slope replicated in ≥2/3 models; G4 ≥50% recovery events and exponential not rejected.
 
