@@ -1,7 +1,7 @@
 # Round 10 — Final Main-Track Ranking
 
 **Date:** 8 November 2026  
-**Status:** all six main-track gates complete. The green-computing track is separate: `green_computing/index.md`.  
+**Status:** all six main-track gates complete. The green-computing track is separate: `https://github.com/Atik203/green-computing-ideas`.  
 **Scope:** surviving main-track ideas only. Killed ideas are intentionally omitted.  
 **Scoring:** Round-8 eight-factor rubric — Novelty 25%, Method 20%, Math 15%, Experiments 10%, Dataset 10%, Q1 fit 10%, Feasibility 5%, Compute 5%. **Core** = mean of the first four; **Weighted** = all eight. Independence is reported separately. Scores are conservative, evidence-adjusted working estimates, not acceptance probabilities.
 
@@ -106,11 +106,11 @@ Each page uses the same sections: **What / Why / How / Dataset / Method / Expect
 
 ## Green track
 
-The green-computing shortlist, ranking, and post-pilot recommendation are in `green_computing/index.md`. **Certified Carbon-Aware Quantization and Sparsity Allocation (G3) was killed by its pilot** (NF4 energy loss, no feasible mix at \(0.8\times\)FP16, additive \(R^2\) fail). The provisional green lead is now **Certified Energy-Normalized Data Selection for Instruction Tuning (G4, 7.50/7.78)**, pending its pilot; **Energy-Optimal Retrieval Depth (G2, 7.00/7.35)** and **Carbon per Correct Answer (G5, 7.00/7.03)** are the 7.0 fallbacks.
+The green-computing shortlist, ranking, and post-pilot recommendation are in `https://github.com/Atik203/green-computing-ideas`. **Certified Carbon-Aware Quantization and Sparsity Allocation (G3) was killed by its pilot** (NF4 energy loss, no feasible mix at \(0.8\times\)FP16, additive \(R^2\) fail). The provisional green lead is now **Certified Energy-Normalized Data Selection for Instruction Tuning (G4, 7.50/7.78)**, pending its pilot; **Energy-Optimal Retrieval Depth (G2, 7.00/7.35)** and **Carbon per Correct Answer (G5, 7.00/7.03)** are the 7.0 fallbacks.
 
 ## Evidence
 
 - Gate reports: `01_t1_theorem_gate.md`, `02_r1_scoped_paper.md`, `03_e2_scaleup.md`, `04_e1_redesign.md`, `05_rankcal_tooliv_fixes.md`, `06_m1_scaleup.md`
-- Survivor review and independent pilot checks: `round9/FINAL_SURVIVORS_REVIEW.md`
-- Running scores and corrections: `HIGH_SCORE_IDEAS_MEMORY.md`
-- Live task list: `TODO.md`
+- Survivor review and independent pilot checks: `../round9/FINAL_SURVIVORS_REVIEW.md`
+- Running scores and corrections: `../../HIGH_SCORE_IDEAS_MEMORY.md`
+- Live task list: `../../TODO.md`

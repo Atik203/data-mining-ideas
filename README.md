@@ -12,11 +12,13 @@ This repository is the **data-mining track** of a two-track selection package. T
 
 | If you want… | Read |
 |---|---|
+| The one master prompt | [`MASTER_PROMPT.md`](MASTER_PROMPT.md) |
 | The current ranking and recommendation | [`research_audit/round10/index.md`](research_audit/round10/index.md) |
 | One page per surviving idea | [`research_audit/round10/ideas/`](research_audit/round10/ideas/) |
 | The verified pilot evidence and corrections | [`research_audit/round9/FINAL_SURVIVORS_REVIEW.md`](research_audit/round9/FINAL_SURVIVORS_REVIEW.md) |
 | The six gate reports | [`research_audit/round10/`](research_audit/round10/) |
-| The running verdict tracker | [`research_audit/TRACK.md`](research_audit/TRACK.md) |
+| The live task list | [`TODO.md`](TODO.md) |
+| The running verdict tracker | [`TRACK.md`](TRACK.md) |
 
 ---
 
@@ -57,16 +59,20 @@ Each page has the same sections: **What / Why / How / Dataset / Method / Expecte
 ## What is inside
 
 ```
-research_audit/
-├── round10/
-│   ├── index.md                 ← ranking and recommendation
-│   ├── 01…06 gate reports
-│   └── ideas/                   ← seven plain-language pages
-├── round9/
-│   └── FINAL_SURVIVORS_REVIEW.md
-├── TRACK.md
-├── HIGH_SCORE_IDEAS_MEMORY.md
-└── RESEARCH_SELECTION_PACKAGE.md
+.
+├── README.md                    ← this guide
+├── MASTER_PROMPT.md             ← one prompt for the track
+├── TODO.md                      ← live task list
+├── TRACK.md                     ← running verdict tracker
+├── HIGH_SCORE_IDEAS_MEMORY.md   ← running scores
+├── RESEARCH_SELECTION_PACKAGE.md
+└── research_audit/
+    ├── round10/
+    │   ├── index.md             ← ranking and recommendation
+    │   ├── 01…06 gate reports
+    │   └── ideas/               ← seven plain-language pages
+    └── round9/
+        └── FINAL_SURVIVORS_REVIEW.md
 ```
 
 Each idea page uses **What / Why / How / Dataset / Method / Expected / Results / Outcome**. The “Outcome” line is the decision.
