@@ -1,7 +1,7 @@
 # Round 10 — Final Main-Track Ranking
 
 **Date:** 8 November 2026  
-**Status:** all six main-track gates complete. The green-computing track is separate: `https://github.com/Atik203/green-computing-ideas`.  
+**Status:** all six main-track gates complete. **Selected for full experiments: Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study (E2).** The green-computing track is separate: `https://github.com/Atik203/green-computing-ideas`.  
 **Scope:** surviving main-track ideas only. Killed ideas are intentionally omitted.  
 **Scoring:** Round-8 eight-factor rubric — Novelty 25%, Method 20%, Math 15%, Experiments 10%, Dataset 10%, Q1 fit 10%, Feasibility 5%, Compute 5%. **Core** = mean of the first four; **Weighted** = all eight. Independence is reported separately. Scores are conservative, evidence-adjusted working estimates, not acceptance probabilities.
 
@@ -112,5 +112,5 @@ The green-computing shortlist, ranking, and post-pilot recommendation are in `ht
 
 - Gate reports: `01_t1_theorem_gate.md`, `02_r1_scoped_paper.md`, `03_e2_scaleup.md`, `04_e1_redesign.md`, `05_rankcal_tooliv_fixes.md`, `06_m1_scaleup.md`
 - Survivor review and independent pilot checks: `../round9/FINAL_SURVIVORS_REVIEW.md`
-
-The master prompt, running scores, and task list are workspace-level files in the local `Research-Ideas` root, not in this repo.
+- Running scores and corrections: `../../HIGH_SCORE_IDEAS_MEMORY.md`
+- Live task list: `../../TODO.md`
