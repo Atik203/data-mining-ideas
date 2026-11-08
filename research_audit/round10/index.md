@@ -106,7 +106,7 @@ Each page uses the same sections: **What / Why / How / Dataset / Method / Expect
 
 ## Green track
 
-The green-computing shortlist, ranking, and post-pilot recommendation are in `https://github.com/Atik203/green-computing-ideas`. **Certified Carbon-Aware Quantization and Sparsity Allocation (G3) was killed by its pilot** (NF4 energy loss, no feasible mix at \(0.8\times\)FP16, additive \(R^2\) fail). The provisional green lead is now **Certified Energy-Normalized Data Selection for Instruction Tuning (G4, 7.50/7.78)**, pending its pilot; **Energy-Optimal Retrieval Depth (G2, 7.00/7.35)** and **Carbon per Correct Answer (G5, 7.00/7.03)** are the 7.0 fallbacks.
+The green-computing shortlist, ranking, and post-pilot recommendation are in `https://github.com/Atik203/green-computing-ideas`. **Certified Carbon-Aware Quantization and Sparsity Allocation (G3) was killed by its pilot** (NF4 energy loss, no feasible mix at \(0.8\times\)FP16, additive \(R^2\) fail). The provisional green lead is now **Certified Energy-Normalized Data Selection for Instruction Tuning (G4, 7.50/7.78)**, pending its pilot; **Energy-Optimal Retrieval Depth (G2, 7.00/7.35)** is **MARGINAL** (static 2pp claim killed; 5pp margin PASS at \(k=4\), 69.3% savings), and **Carbon per Correct Answer (G5, 7.00/7.03)** is the other 7.0 fallback.
 
 ## Evidence
 
