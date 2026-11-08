@@ -1,4 +1,6 @@
-# E1 — Multi-Turn Constraint Retention: Age or Load?
+# Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay
+
+**Internal short name:** E1
 
 **One-line:** When a model forgets an instruction after several turns, is it because the instruction is old — or because many other constraints are active at the same time?  
 **Score:** Core **6.63** / Weighted **7.10** — **REDESIGN DONE; a new pilot is required.**  

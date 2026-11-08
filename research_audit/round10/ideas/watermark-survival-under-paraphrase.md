@@ -1,4 +1,6 @@
-# T1 — Watermark Detectability Under Paraphrase
+# Watermark Survival Under Paraphrase: Surface Change, Not Semantic Distance
+
+**Internal short name:** T1
 
 **One-line:** Can a text watermark survive paraphrasing, and can detection be predicted from surface changes rather than semantic distance?  
 **Score:** Core **5.63** / Weighted **6.18** — **STOP as a theory paper; keep only a bounded measurement note.**  

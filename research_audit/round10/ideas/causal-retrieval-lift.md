@@ -1,4 +1,6 @@
-# R1 — Causal Retrieval Lift (Scoped)
+# Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence
+
+**Internal short name:** R1
 
 **One-line:** How much does retrieval actually improve an answer, and how much of that lift depends on the answer being present in the retrieved passage?  
 **Score:** Core **6.65** / Weighted **6.83** — **CONDITIONAL GO as a bounded measurement paper.**  

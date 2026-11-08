@@ -1,4 +1,6 @@
-# E2 — Fixed-Prefix Tool-Observation Sensitivity
+# Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study
+
+**Internal short name:** E2
 
 **One-line:** If a tool returns a wrong value, does the agent’s next decision change — and how long does it take to recover?  
 **Score:** Core **7.38** / Weighted **7.55** — **GO, staged; current main-track lead.**  

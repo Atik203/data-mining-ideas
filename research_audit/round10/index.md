@@ -19,15 +19,15 @@
 
 ## Final ranking
 
-| Rank | Idea | Nov | Method | Math | Exp | Data | Q1 | Feas | Compute | Core | Weighted | Indep. | Gate verdict |
-|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 1 | **E2 — fixed-prefix tool-observation sensitivity** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7.0 | **GO, staged** — 800 real prefixes, 3 models, 5 arms; $63 base / $70 cap |
-| 2 | **RANKCAL — rank vs. calibration-level change** | 7.5 | 7.5 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.0 | **6.75** | **7.18** | 8.5 | **GO, conditional** — 2,500 MMLU items; paired DeLong + TOST ±0.03 |
-| 3 | **R1 — causal retrieval lift (scoped)** | 6.8 | 7.0 | 6.0 | 6.8 | 6.0 | 7.0 | 8.0 | 9.0 | **6.65** | **6.83** | 8.5 | **GO, conditional** — bounded measurement paper; N=800; invalid claims cut |
-| 4 | **E1 — multi-turn constraint retention** | 7.5 | 7.0 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.5 | **6.63** | **7.10** | 9.0 | **REDESIGN DONE** — run the new 3-arm factorial; current pilot is confounded |
-| 5 | **Tool-IV — encouragement effect of tool use** | 7.5 | 7.0 | 6.5 | 5.5 | 6.5 | 6.5 | 8.5 | 9.0 | **6.63** | **6.98** | 8.5 | **GO, conditional** — calibration then 4,500 calls; corrected BP bounds |
-| 6 | **M1 — Bangla native-to-romanized transfer** | 7.0 | 7.0 | 5.0 | 5.0 | 6.0 | 7.0 | 7.5 | 8.5 | **6.00** | **6.50** | 8.0 | **CONDITIONAL** — empirical only; 9k/7B + ~$320 native audit |
-| 7 | **T1 — watermark detectability under paraphrase** | 5.5 | 6.5 | 4.5 | 6.0 | 7.0 | 7.0 | 7.5 | 9.0 | **5.63** | **6.18** | 10.0 | **STOP theory** — mean-radius theorem killed; measurement note only |
+| Rank | ID | Title | Nov | Method | Math | Exp | Data | Q1 | Feas | Compute | Core | Weighted | Indep. | Gate verdict |
+|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| 1 | E2 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7.0 | **GO, staged** — 800 real prefixes, 3 models, 5 arms; $63 base / $70 cap |
+| 2 | RANKCAL | **The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration** | 7.5 | 7.5 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.0 | **6.75** | **7.18** | 8.5 | **GO, conditional** — 2,500 MMLU items; paired DeLong + TOST ±0.03 |
+| 3 | R1 | **Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence** | 6.8 | 7.0 | 6.0 | 6.8 | 6.0 | 7.0 | 8.0 | 9.0 | **6.65** | **6.83** | 8.5 | **GO, conditional** — bounded measurement paper; N=800; invalid claims cut |
+| 4 | E1 | **Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay** | 7.5 | 7.0 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.5 | **6.63** | **7.10** | 9.0 | **REDESIGN DONE** — run the new 3-arm factorial; current pilot is confounded |
+| 5 | Tool-IV | **The Causal Effect of Tool Use on Answer Accuracy: A Randomized Encouragement Study** | 7.5 | 7.0 | 6.5 | 5.5 | 6.5 | 6.5 | 8.5 | 9.0 | **6.63** | **6.98** | 8.5 | **GO, conditional** — calibration then 4,500 calls; corrected BP bounds |
+| 6 | M1 | **Bangla Across Scripts: Native-to-Romanized Transfer and Contrastive Alignment** | 7.0 | 7.0 | 5.0 | 5.0 | 6.0 | 7.0 | 7.5 | 8.5 | **6.00** | **6.50** | 8.0 | **CONDITIONAL** — empirical only; 9k/7B + ~$320 native audit |
+| 7 | T1 | **Watermark Survival Under Paraphrase: Surface Change, Not Semantic Distance** | 5.5 | 6.5 | 4.5 | 6.0 | 7.0 | 7.0 | 7.5 | 9.0 | **5.63** | **6.18** | 10.0 | **STOP theory** — mean-radius theorem killed; measurement note only |
 
 Arithmetic examples: E2 Core = (8.0+7.5+7.5+6.5)/4 = 7.375 → 7.38. R1 Core = (6.8+7.0+6.0+6.8)/4 = 6.65. T1 Core = (5.5+6.5+4.5+6.0)/4 = 5.625 → 5.63.
 
@@ -35,23 +35,23 @@ Arithmetic examples: E2 Core = (8.0+7.5+7.5+6.5)/4 = 7.375 → 7.38. R1 Core = (
 
 ## What each gate changed
 
-| Gate | Idea | Verdict | What changed | Revised score |
-|---|---|---|---|---|
-| **A** | T1 | **WEAKEN / STOP theory** | Mean-radius $\rho_c(\delta,n)$ is killed by a mixture attack; the missing $\eta=\eta(\rho)$ lemma is false; the $\chi^2$ proof is invalid; the threshold is negative at $n=200$; Wang et al. (NeurIPS 2026) pre-empts the retained-signal threshold. Only the $\bar p$ surface-change mechanism survives (fits 4/5 pilot arms, $\eta_c\approx0.39$). | **5.63 / 6.18** |
-| **B** | R1 | **CONDITIONAL GO** | Keep only the randomized retrieval-lift estimand, answer-presence decomposition, and random-passage penalty. Drop contamination, twin/conflict, Manski, and minimax claims. The 74% twin result is model compliance, not construction validity. N=800 gives 5.5pp MDE for $\tau$. | **6.65 / 6.83** |
-| **C** | E2 | **GO, staged** | 800 real $\tau$-bench prefixes (400 airline / 400 retail), 3 open-weight 7–8B models, 5 observation arms, 4-step recovery. MDE 0.20 logit/level per model; pooled ≤0.15; pilot-implied $b\approx0.8$. 6,554 eligible prefixes across 165 task–domain pairs. $63 base / $70 hard cap. | **7.38 / 7.55** *(stands until data)* |
-| **D** | E1 | **REDESIGN DONE** | The pilot confounds constraint age with active load: turn FE cuts $\lambda$ from .461/.481 to .257/.333, and both clustered CIs cross zero. New 3-arm × 3-family × 60-dialogue × 8-turn factorial: PS (age only), FC (load only), RR (age⊥load, $r=-.03$). MDE $\beta_a=.076$, $\beta_k=.060$, $\Delta=.084$. | **6.63 / 7.10** |
-| **E** | RANKCAL | **GO, conditional** | 2,500 MMLU items; Qwen2.5-7B base/Instruct + Llama-3.1-8B replication; four pre-registered MMLU groups; paired DeLong + TOST ±0.03. MDE 0.028 item-level, 0.036 cluster-robust. Equivalence is publishable as a null paper. | **6.75 / 7.18** |
-| **E** | Tool-IV | **GO, conditional** | Calibration (400 items, $p_0=0.60$–$0.70$, $\gamma\ge0.35$), then 4,500 calls on hard tasks; 3 arms C/P/T; correct BP LP. MDE LATE 0.089 at $\gamma=.50$. Stop if $\gamma<.35$, placebo $|\delta|>.06$, or LATE CI includes 0 with upper $<.10$. | **6.63 / 6.98** |
-| **F** | M1 | **CONDITIONAL / empirical only** | The $\eta$ theorem is dropped. The pilot's 110 "cells" are 89 unique items in 7 groups; seeds test different groups (21/89 overlap); cluster CI [0.35, 25.06]pp; MDE 22–32pp. Proceed only with 9k items, frozen document-clustered split, 7B QLoRA, shuffled-pair placebo, and a ~$320 native-speaker audit. | **6.00 / 6.50** |
+| Gate | ID | Title | Verdict | What changed | Revised score |
+|---|---|---|---|---|---|
+| **A** | T1 | Watermark Survival Under Paraphrase: Surface Change, Not Semantic Distance | **WEAKEN / STOP theory** | Mean-radius $\rho_c(\delta,n)$ is killed by a mixture attack; the missing $\eta=\eta(\rho)$ lemma is false; the $\chi^2$ proof is invalid; the threshold is negative at $n=200$; Wang et al. (NeurIPS 2026) pre-empts the retained-signal threshold. Only the $\bar p$ surface-change mechanism survives (fits 4/5 pilot arms, $\eta_c\approx0.39$). | **5.63 / 6.18** |
+| **B** | R1 | Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence | **CONDITIONAL GO** | Keep only the randomized retrieval-lift estimand, answer-presence decomposition, and random-passage penalty. Drop contamination, twin/conflict, Manski, and minimax claims. The 74% twin result is model compliance, not construction validity. N=800 gives 5.5pp MDE for $\tau$. | **6.65 / 6.83** |
+| **C** | E2 | Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study | **GO, staged** | 800 real $\tau$-bench prefixes (400 airline / 400 retail), 3 open-weight 7–8B models, 5 observation arms, 4-step recovery. MDE 0.20 logit/level per model; pooled ≤0.15; pilot-implied $b\approx0.8$. 6,554 eligible prefixes across 165 task–domain pairs. $63 base / $70 hard cap. | **7.38 / 7.55** *(stands until data)* |
+| **D** | E1 | Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay | **REDESIGN DONE** | The pilot confounds constraint age with active load: turn FE cuts $\lambda$ from .461/.481 to .257/.333, and both clustered CIs cross zero. New 3-arm × 3-family × 60-dialogue × 8-turn factorial: PS (age only), FC (load only), RR (age⊥load, $r=-.03$). MDE $\beta_a=.076$, $\beta_k=.060$, $\Delta=.084$. | **6.63 / 7.10** |
+| **E** | RANKCAL | The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration | **GO, conditional** | 2,500 MMLU items; Qwen2.5-7B base/Instruct + Llama-3.1-8B replication; four pre-registered MMLU groups; paired DeLong + TOST ±0.03. MDE 0.028 item-level, 0.036 cluster-robust. Equivalence is publishable as a null paper. | **6.75 / 7.18** |
+| **E** | Tool-IV | The Causal Effect of Tool Use on Answer Accuracy: A Randomized Encouragement Study | **GO, conditional** | Calibration (400 items, $p_0=0.60$–$0.70$, $\gamma\ge0.35$), then 4,500 calls on hard tasks; 3 arms C/P/T; correct BP LP. MDE LATE 0.089 at $\gamma=.50$. Stop if $\gamma<.35$, placebo $|\delta|>.06$, or LATE CI includes 0 with upper $<.10$. | **6.63 / 6.98** |
+| **F** | M1 | Bangla Across Scripts: Native-to-Romanized Transfer and Contrastive Alignment | **CONDITIONAL / empirical only** | The $\eta$ theorem is dropped. The pilot's 110 "cells" are 89 unique items in 7 groups; seeds test different groups (21/89 overlap); cluster CI [0.35, 25.06]pp; MDE 22–32pp. Proceed only with 9k items, frozen document-clustered split, 7B QLoRA, shuffled-pair placebo, and a ~$320 native-speaker audit. | **6.00 / 6.50** |
 
 ---
 
 ## Decision
 
-### Recommendation: E2
+### Recommendation: Tool-Observation Sensitivity in Language-Model Agents (E2)
 
-Run **E2** as the main paper. It is the only survivor with all five properties at once: a clean causal estimand, a real pilot signal, an empirically harvested prefix supply, a powered design, and a budget inside the cap. The claim is deliberately bounded: the graded effect of observation content on the next decision for open-weight 7–8B models, plus a recovery half-life. It is **not** a universal law and **not** a model-ranking paper.
+Run **Tool-Observation Sensitivity in Language-Model Agents** (E2) as the main paper. It is the only survivor with all five properties at once: a clean causal estimand, a real pilot signal, an empirically harvested prefix supply, a powered design, and a budget inside the cap. The claim is deliberately bounded: the graded effect of observation content on the next decision for open-weight 7–8B models, plus a recovery half-life. It is **not** a universal law and **not** a model-ranking paper.
 
 **Sequence:**
 
@@ -62,16 +62,16 @@ Run **E2** as the main paper. It is the only survivor with all five properties a
 
 **Cash:** $63 base, **$70 hard cap**. No paid API. If only a $0.89/h secure 4090 is available, cap at 30 GPU-h and reduce N to 600.
 
-### Fallback: RANKCAL
+### Fallback: The Ranking Cost of Instruction Tuning (RANKCAL)
 
-If E2's G0/G1 fails (prefix supply, construct validity, or calibration ceiling), run **RANKCAL**. It is cheaper and cleaner: 2,500 MMLU items on 7B base/Instruct, paired DeLong, TOST ±0.03. It answers a precise question — does instruction tuning degrade ranking quality even when accuracy rises? — and both a positive and an equivalence result are publishable. Do not run RANKCAL and E2 at the same time; one paper, one budget.
+If E2's G0/G1 fails (prefix supply, construct validity, or calibration ceiling), run **The Ranking Cost of Instruction Tuning** (RANKCAL). It is cheaper and cleaner: 2,500 MMLU items on 7B base/Instruct, paired DeLong, TOST ±0.03. It answers a precise question — does instruction tuning degrade ranking quality even when accuracy rises? — and both a positive and an equivalence result are publishable. Do not run RANKCAL and E2 at the same time; one paper, one budget.
 
 ### Do not start
 
-- **T1's old 7B phase-boundary experiment.** The theorem is dead and the empirical threshold is pre-empted.
-- **R1's contamination/twin/conflict extensions.** The pilot does not identify them; they are separate studies.
-- **E1 at scale before the new pilot.** The old design cannot separate age from load.
-- **M1 before the native audit.** Without it, the corpus validity claim fails and the GPU spend is wasted.
+- **Watermark Survival Under Paraphrase (T1).** The theorem is dead and the empirical threshold is pre-empted.
+- **Causal Retrieval Lift (R1)** contamination/twin/conflict extensions. The pilot does not identify them; they are separate studies.
+- **Constraint Age or Constraint Load? (E1)** at scale before the new pilot. The old design cannot separate age from load.
+- **Bangla Across Scripts (M1)** before the native audit. Without it, the corpus validity claim fails and the GPU spend is wasted.
 
 ---
 
@@ -94,19 +94,19 @@ If E2's G0/G1 fails (prefix supply, construct validity, or calibration ceiling),
 
 ## Plain-language idea pages
 
-- `ideas/01_t1_watermark.md`
-- `ideas/02_e2_cto.md`
-- `ideas/03_r1_retrieval.md`
-- `ideas/04_rankcal.md`
-- `ideas/05_e1_turn_decay.md`
-- `ideas/06_tool_iv.md`
-- `ideas/07_m1_script.md`
+- `ideas/watermark-survival-under-paraphrase.md` — Watermark Survival Under Paraphrase (T1)
+- `ideas/tool-observation-sensitivity.md` — Tool-Observation Sensitivity in Language-Model Agents (E2)
+- `ideas/causal-retrieval-lift.md` — Causal Retrieval Lift (R1)
+- `ideas/ranking-cost-of-instruction-tuning.md` — The Ranking Cost of Instruction Tuning (RANKCAL)
+- `ideas/constraint-age-or-load.md` — Constraint Age or Constraint Load? (E1)
+- `ideas/causal-effect-of-tool-use.md` — The Causal Effect of Tool Use on Answer Accuracy (Tool-IV)
+- `ideas/bangla-script-transfer.md` — Bangla Across Scripts (M1)
 
 Each page uses the same sections: **What / Why / How / Dataset / Method / Expected / Results / Outcome**.
 
 ## Green track
 
-The green-computing shortlist, ranking, and post-pilot recommendation are in `green_computing/index.md`. **G3′ was killed by its pilot** (NF4 energy loss, no feasible mix at \(0.8\times\)FP16, additive \(R^2\) fail). The provisional green lead is now **G4′ (7.50/7.78)**, pending its pilot; G2 (7.00/7.35) and G5′ (7.00/7.03) are the 7.0 fallbacks.
+The green-computing shortlist, ranking, and post-pilot recommendation are in `green_computing/index.md`. **Certified Carbon-Aware Quantization and Sparsity Allocation (G3) was killed by its pilot** (NF4 energy loss, no feasible mix at \(0.8\times\)FP16, additive \(R^2\) fail). The provisional green lead is now **Certified Energy-Normalized Data Selection for Instruction Tuning (G4, 7.50/7.78)**, pending its pilot; **Energy-Optimal Retrieval Depth (G2, 7.00/7.35)** and **Carbon per Correct Answer (G5, 7.00/7.03)** are the 7.0 fallbacks.
 
 ## Evidence
 

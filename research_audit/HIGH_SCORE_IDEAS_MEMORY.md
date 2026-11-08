@@ -61,15 +61,15 @@ Ollama 4B 600 gens/3009s: neutral drop 15.0pp lam 0.461 p=0.0027; strict drop 14
 ## Final evidence-adjusted review (2026-11-08) — supersedes scan scores above
 Current Round-8 weights; Core = mean(Novelty, Method, Math, Exp). Killed ideas intentionally omitted. Full verification: `round9/FINAL_SURVIVORS_REVIEW.md`.
 
-| Rank | Idea | Core | Weighted | Status |
-|---:|---|---:|---:|---|
-| 1 | E2 CTO | 7.38 | 7.55 | Gate C: GO staged; 800 real prefixes, 3×7–8B, $70 cap |
-| 2 | RANKCAL | 6.75 | 7.18 | direction only; N=2,500/TOST next |
-| 3 | R1 retrieval-lift (scoped) | 6.65 | 6.83 | real effect; contamination/twin/conflict dropped |
-| 4 | E1 turn retention | 6.63 | 7.10 | Gate D: valid 3-arm factorial; new pilot needed |
-| 5 | Tool-IV | 6.63 | 6.98 | conditional; corrected bounds + hard tasks |
-| 6 | M1 Bangla script | 6.00 | 6.50 | Gate F: n inflated; direction only; 9k/7B + native audit |
-| 7 | T1 watermark | 5.63 | 6.18 | Gate A: mean-radius theorem killed; Wang 2026 preempts; negative/measurement only |
+| Rank | ID | Title | Core | Weighted | Status |
+|---:|---|---|---:|---:|---|
+| 1 | E2 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study** | 7.38 | 7.55 | Gate C: GO staged; 800 real prefixes, 3×7–8B, $70 cap |
+| 2 | RANKCAL | **The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration** | 6.75 | 7.18 | direction only; N=2,500/TOST next |
+| 3 | R1 | **Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence** | 6.65 | 6.83 | real effect; contamination/twin/conflict dropped |
+| 4 | E1 | **Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay** | 6.63 | 7.10 | Gate D: valid 3-arm factorial; new pilot needed |
+| 5 | Tool-IV | **The Causal Effect of Tool Use on Answer Accuracy: A Randomized Encouragement Study** | 6.63 | 6.98 | conditional; corrected bounds + hard tasks |
+| 6 | M1 | **Bangla Across Scripts: Native-to-Romanized Transfer and Contrastive Alignment** | 6.00 | 6.50 | Gate F: n inflated; direction only; 9k/7B + native audit |
+| 7 | T1 | **Watermark Survival Under Paraphrase: Surface Change, Not Semantic Distance** | 5.63 | 6.18 | Gate A: mean-radius theorem killed; Wang 2026 preempts; negative/measurement only |
 
 Important: **all six gates are complete.** Gate A killed T1’s mean-radius theorem; only the non-identifiability + \(\bar p\) mechanism survives. Gate B cut R1 to 6.65/6.83 by removing invalid contamination/twin/conflict claims. Gate C passed E2 as a staged GO: 800 real τ-bench prefixes, 3 open-weight 7–8B models, 5 arms, MDE 0.20 logit/level, 6,554 eligible prefixes, $63 base/$70 cap. Gate D produced a valid 3-arm factorial for E1 (age⊥load; β_a MDE .076, β_k .060, Δ .084). Gate E made RANKCAL (N=2,500/TOST, MDE .028) and Tool-IV (4,500 calls, LATE MDE .089) conditional GO. Gate F cut M1 to 6.00/6.50 after finding inflated n and seed-confounded splits. **E2 is the final #1 at 7.38/7.55. No idea has a verified 8+ core.**
 - Idea 10 RANKCAL: DIRECTIONAL PASS, n.s. at N=500. |dAUROC|=0.039 (DeLong CI covers 0, MDE~0.06 as predicted); kappa_Y 0.615; isotonic closes ECE gap 84% but rank gap persists post-isotonic — not pure level shift. IT more accurate yet worse-ranked. Needs N=1500 + 7B. Files round9/pilot_idea10.md + ledger_P_I10.csv (500 rows).

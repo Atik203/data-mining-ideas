@@ -10,13 +10,13 @@ Ranked by Core; weighted score breaks ties.
 
 | Rank | Idea | Nov | Method | Math | Exp | Data | Q1 | Feas | Compute | Core | Weighted | Indep. | Status |
 |---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 1 | **E2 — fixed-prefix tool-observation sensitivity** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7 | Gate C: GO staged; 800 real prefixes, 3 models, $70 cap |
-| 2 | **RANKCAL — rank vs. calibration-level change** | 7.5 | 7.5 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.0 | **6.75** | **7.18** | 8.5 | Directional; N=2,500/TOST next |
-| 3 | **R1 — causal retrieval lift (scoped)** | 6.8 | 7.0 | 6.0 | 6.8 | 6.0 | 7.0 | 8.0 | 9.0 | **6.65** | **6.83** | 8.5 | Gate B: conditional measurement paper; claims cut |
-| 4 | **E1 — multi-turn constraint retention** | 7.5 | 7.0 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.5 | **6.63** | **7.10** | 9 | Gate D: valid 3-arm factorial; new pilot needed |
-| 5 | **Tool-IV — encouragement effect of tool use** | 7.5 | 7.0 | 6.5 | 5.5 | 6.5 | 6.5 | 8.5 | 9.0 | **6.63** | **6.98** | 8.5 | Conditional; corrected bounds, hard tasks |
-| 6 | **M1 — Bangla native-to-romanized transfer** | 7.0 | 7.0 | 5.0 | 5.0 | 6.0 | 7.0 | 7.5 | 8.5 | **6.00** | **6.50** | 8 | Gate F: n inflated; direction only; 9k/7B + native audit |
-| 7 | **T1 — watermark detectability under paraphrase** | 5.5 | 6.5 | 4.5 | 6.0 | 7.0 | 7.0 | 7.5 | 9.0 | **5.63** | **6.18** | 10 | **Gate A: mean-radius ρ_c killed; Wang 2026 preempts threshold; only non-identifiability + p̄ mechanism survives** |
+| 1 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study (E2)** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7 | Gate C: GO staged; 800 real prefixes, 3 models, $70 cap |
+| 2 | **The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration (RANKCAL)** | 7.5 | 7.5 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.0 | **6.75** | **7.18** | 8.5 | Directional; N=2,500/TOST next |
+| 3 | **Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence (R1)** | 6.8 | 7.0 | 6.0 | 6.8 | 6.0 | 7.0 | 8.0 | 9.0 | **6.65** | **6.83** | 8.5 | Gate B: conditional measurement paper; claims cut |
+| 4 | **Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay (E1)** | 7.5 | 7.0 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.5 | **6.63** | **7.10** | 9 | Gate D: valid 3-arm factorial; new pilot needed |
+| 5 | **The Causal Effect of Tool Use on Answer Accuracy: A Randomized Encouragement Study (Tool-IV)** | 7.5 | 7.0 | 6.5 | 5.5 | 6.5 | 6.5 | 8.5 | 9.0 | **6.63** | **6.98** | 8.5 | Conditional; corrected bounds, hard tasks |
+| 6 | **Bangla Across Scripts: Native-to-Romanized Transfer and Contrastive Alignment (M1)** | 7.0 | 7.0 | 5.0 | 5.0 | 6.0 | 7.0 | 7.5 | 8.5 | **6.00** | **6.50** | 8 | Gate F: n inflated; direction only; 9k/7B + native audit |
+| 7 | **Watermark Survival Under Paraphrase: Surface Change, Not Semantic Distance (T1)** | 5.5 | 6.5 | 4.5 | 6.0 | 7.0 | 7.0 | 7.5 | 9.0 | **5.63** | **6.18** | 10 | **Gate A: mean-radius ρ_c killed; Wang 2026 preempts threshold; only non-identifiability + p̄ mechanism survives** |
 
 Arithmetic examples: T1 Core=(8+8+7+7.5)/4=7.625; Weighted=.25(8)+.20(8)+.15(7)+.10(7.5)+.10(7)+.10(8)+.05(7.5)+.05(9)=7.725. E1 Core=(7.5+7+6.5+5.5)/4=6.625; Weighted=7.10. These are deliberately below the optimistic Round-8 scan scores.
 

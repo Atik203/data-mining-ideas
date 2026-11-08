@@ -12,15 +12,15 @@
 
 All six Round-10 gates are complete. The surviving-only ranking is:
 
-| Rank | Idea | Core | Weighted | Decision |
-|---:|---|---:|---:|---|
-| 1 | **E2 — fixed-prefix tool-observation sensitivity** | **7.38** | **7.55** | **GO, staged** — 800 real τ-bench prefixes, 3×7–8B, 5 arms; $63 base/$70 cap |
-| 2 | RANKCAL — rank vs. calibration level | 6.75 | 7.18 | Conditional GO — 2,500 MMLU items + TOST ±.03 |
-| 3 | R1 — causal retrieval lift (scoped) | 6.65 | 6.83 | Conditional GO — N=800 measurement paper |
-| 4 | E1 — multi-turn constraint retention | 6.63 | 7.10 | Redesign done — run the new 3-arm factorial |
-| 5 | Tool-IV — encouragement effect of tool use | 6.63 | 6.98 | Conditional GO after calibration |
-| 6 | M1 — Bangla native-to-romanized transfer | 6.00 | 6.50 | Conditional — native audit then 9k/7B |
-| 7 | T1 — watermark detectability under paraphrase | 5.63 | 6.18 | Stop theory; measurement note only |
+| Rank | ID | Title | Core | Weighted | Decision |
+|---:|---|---|---:|---:|---|
+| 1 | E2 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study** | **7.38** | **7.55** | **GO, staged** — 800 real τ-bench prefixes, 3×7–8B, 5 arms; $63 base/$70 cap |
+| 2 | RANKCAL | **The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration** | 6.75 | 7.18 | Conditional GO — 2,500 MMLU items + TOST ±.03 |
+| 3 | R1 | **Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence** | 6.65 | 6.83 | Conditional GO — N=800 measurement paper |
+| 4 | E1 | **Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay** | 6.63 | 7.10 | Redesign done — run the new 3-arm factorial |
+| 5 | Tool-IV | **The Causal Effect of Tool Use on Answer Accuracy: A Randomized Encouragement Study** | 6.63 | 6.98 | Conditional GO after calibration |
+| 6 | M1 | **Bangla Across Scripts: Native-to-Romanized Transfer and Contrastive Alignment** | 6.00 | 6.50 | Conditional — native audit then 9k/7B |
+| 7 | T1 | **Watermark Survival Under Paraphrase: Surface Change, Not Semantic Distance** | 5.63 | 6.18 | Stop theory; measurement note only |
 
 **No verified 8+ paper.** The best executable paper is E2; the best fallback is RANKCAL. T1’s mean-radius theorem was killed in Gate A, and Wang et al. (NeurIPS 2026) pre-empts the retained-signal threshold. Gate C passed E2 with an MDE of 0.20 logit/level and a measured supply of 6,554 eligible prefixes. Full detail: `round10/index.md`; evidence: `round9/FINAL_SURVIVORS_REVIEW.md`.
 

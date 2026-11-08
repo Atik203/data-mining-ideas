@@ -1,4 +1,6 @@
-# Tool-IV — Does Encouraging Tool Use Causally Improve Accuracy?
+# The Causal Effect of Tool Use on Answer Accuracy: A Randomized Encouragement Study
+
+**Internal short name:** Tool-IV
 
 **One-line:** Randomly nudge a model to call a tool, then use the nudge as an instrument to estimate the causal effect of tool use on answer correctness.  
 **Score:** Core **6.63** / Weighted **6.98** — **GO, conditional after calibration.**  

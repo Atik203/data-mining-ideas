@@ -22,15 +22,15 @@ This repository is the **data-mining track** of a two-track selection package. T
 
 ## Current ranking (8 November 2026)
 
-| Rank | Idea | Nov | Method | Math | Exp | Data | Q1 | Feas | Compute | Core | Weighted | Indep. | Decision |
-|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 1 | **E2 — fixed-prefix tool-observation sensitivity** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7.0 | **GO, staged** — 800 real τ-bench prefixes, 3×7–8B, 5 arms, $63/$70 |
-| 2 | **RANKCAL — rank vs. calibration level** | 7.5 | 7.5 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.0 | **6.75** | **7.18** | 8.5 | **GO, conditional** — 2,500 MMLU + TOST ±.03 |
-| 3 | **R1 — causal retrieval lift (scoped)** | 6.8 | 7.0 | 6.0 | 6.8 | 6.0 | 7.0 | 8.0 | 9.0 | **6.65** | **6.83** | 8.5 | **GO, conditional** — N=800 measurement paper |
-| 4 | **E1 — multi-turn constraint retention** | 7.5 | 7.0 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.5 | **6.63** | **7.10** | 9.0 | **Redesign done** — run the new 3-arm factorial |
-| 5 | **Tool-IV — encouragement effect of tool use** | 7.5 | 7.0 | 6.5 | 5.5 | 6.5 | 6.5 | 8.5 | 9.0 | **6.63** | **6.98** | 8.5 | **GO, conditional** — calibration then 4,500 calls |
-| 6 | **M1 — Bangla native-to-romanized transfer** | 7.0 | 7.0 | 5.0 | 5.0 | 6.0 | 7.0 | 7.5 | 8.5 | **6.00** | **6.50** | 8.0 | **Conditional** — native audit, then 9k/7B |
-| 7 | **T1 — watermark detectability under paraphrase** | 5.5 | 6.5 | 4.5 | 6.0 | 7.0 | 7.0 | 7.5 | 9.0 | **5.63** | **6.18** | 10.0 | **Stop theory** — measurement note only |
+| Rank | ID | Title | Nov | Method | Math | Exp | Data | Q1 | Feas | Compute | Core | Weighted | Indep. | Decision |
+|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| 1 | E2 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7.0 | **GO, staged** — 800 real τ-bench prefixes, 3×7–8B, 5 arms, $63/$70 |
+| 2 | RANKCAL | **The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration** | 7.5 | 7.5 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.0 | **6.75** | **7.18** | 8.5 | **GO, conditional** — 2,500 MMLU + TOST ±.03 |
+| 3 | R1 | **Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence** | 6.8 | 7.0 | 6.0 | 6.8 | 6.0 | 7.0 | 8.0 | 9.0 | **6.65** | **6.83** | 8.5 | **GO, conditional** — N=800 measurement paper |
+| 4 | E1 | **Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay** | 7.5 | 7.0 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.5 | **6.63** | **7.10** | 9.0 | **Redesign done** — run the new 3-arm factorial |
+| 5 | Tool-IV | **The Causal Effect of Tool Use on Answer Accuracy: A Randomized Encouragement Study** | 7.5 | 7.0 | 6.5 | 5.5 | 6.5 | 6.5 | 8.5 | 9.0 | **6.63** | **6.98** | 8.5 | **GO, conditional** — calibration then 4,500 calls |
+| 6 | M1 | **Bangla Across Scripts: Native-to-Romanized Transfer and Contrastive Alignment** | 7.0 | 7.0 | 5.0 | 5.0 | 6.0 | 7.0 | 7.5 | 8.5 | **6.00** | **6.50** | 8.0 | **Conditional** — native audit, then 9k/7B |
+| 7 | T1 | **Watermark Survival Under Paraphrase: Surface Change, Not Semantic Distance** | 5.5 | 6.5 | 4.5 | 6.0 | 7.0 | 7.0 | 7.5 | 9.0 | **5.63** | **6.18** | 10.0 | **Stop theory** — measurement note only |
 
 **Recommendation:** execute **E2**; fallback **RANKCAL**. **No verified 8+ candidate exists.** T1’s mean-radius theorem was killed in Gate A, and Wang et al. (NeurIPS 2026) pre-empts the retained-signal threshold.
 
@@ -44,13 +44,13 @@ Each page has the same sections: **What / Why / How / Dataset / Method / Expecte
 
 | Idea | Page |
 |---|---|
-| E2 — fixed-prefix tool-observation sensitivity | [`02_e2_cto.md`](research_audit/round10/ideas/02_e2_cto.md) |
-| RANKCAL — rank vs. calibration level | [`04_rankcal.md`](research_audit/round10/ideas/04_rankcal.md) |
-| R1 — causal retrieval lift (scoped) | [`03_r1_retrieval.md`](research_audit/round10/ideas/03_r1_retrieval.md) |
-| E1 — multi-turn constraint retention | [`05_e1_turn_decay.md`](research_audit/round10/ideas/05_e1_turn_decay.md) |
-| Tool-IV — encouragement effect of tool use | [`06_tool_iv.md`](research_audit/round10/ideas/06_tool_iv.md) |
-| M1 — Bangla native-to-romanized transfer | [`07_m1_script.md`](research_audit/round10/ideas/07_m1_script.md) |
-| T1 — watermark detectability under paraphrase | [`01_t1_watermark.md`](research_audit/round10/ideas/01_t1_watermark.md) |
+| Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study (E2) | [`tool-observation-sensitivity.md`](research_audit/round10/ideas/tool-observation-sensitivity.md) |
+| The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration (RANKCAL) | [`ranking-cost-of-instruction-tuning.md`](research_audit/round10/ideas/ranking-cost-of-instruction-tuning.md) |
+| Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence (R1) | [`causal-retrieval-lift.md`](research_audit/round10/ideas/causal-retrieval-lift.md) |
+| Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay (E1) | [`constraint-age-or-load.md`](research_audit/round10/ideas/constraint-age-or-load.md) |
+| The Causal Effect of Tool Use on Answer Accuracy: A Randomized Encouragement Study (Tool-IV) | [`causal-effect-of-tool-use.md`](research_audit/round10/ideas/causal-effect-of-tool-use.md) |
+| Bangla Across Scripts: Native-to-Romanized Transfer and Contrastive Alignment (M1) | [`bangla-script-transfer.md`](research_audit/round10/ideas/bangla-script-transfer.md) |
+| Watermark Survival Under Paraphrase: Surface Change, Not Semantic Distance (T1) | [`watermark-survival-under-paraphrase.md`](research_audit/round10/ideas/watermark-survival-under-paraphrase.md) |
 
 ---
 

@@ -1,4 +1,6 @@
-# RANKCAL — Does Instruction Tuning Tax Ranking Quality?
+# The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration
+
+**Internal short name:** RANKCAL
 
 **One-line:** Instruction tuning often raises accuracy but can lower AUROC — so the model answers more questions correctly yet ranks correct answers less reliably.  
 **Score:** Core **6.75** / Weighted **7.18** — **GO, conditional.**  

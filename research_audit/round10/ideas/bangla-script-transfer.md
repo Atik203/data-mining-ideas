@@ -1,4 +1,6 @@
-# M1 — Bangla Native-to-Romanized Transfer
+# Bangla Across Scripts: Native-to-Romanized Transfer and Contrastive Alignment
+
+**Internal short name:** M1
 
 **One-line:** A model trained on native Bangla script loses accuracy when the same text is written in romanized Bangla; does contrastive alignment close the gap, and how much is information loss?  
 **Score:** Core **6.00** / Weighted **6.50** — **CONDITIONAL; empirical paper only, native audit first.**  
