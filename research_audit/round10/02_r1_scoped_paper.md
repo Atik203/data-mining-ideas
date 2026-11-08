@@ -282,7 +282,7 @@ Even at SD 0.70, N=800 detects a 7pp effect at 80% power. The primary effect wou
 ### 5.5 Recommended sample and budget
 
 - **Primary:** 800 new SQuAD validation questions, disjoint from the pilot’s 200; stratified by question word with a minimum per stratum; 3 open-weight models (e.g., Qwen2.5-7B-Instruct, Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.3); BM25 (Pyserini/Lucene) + one dense retriever (Contriever/E5); corpus = the 20,958 unique SQuAD train+val passages (or a standard Wikipedia corpus for the TriviaQA replication); arms E, S, T, O; randomized order; greedy decoding; max 32 new tokens. Answer-presence uses any gold alias after official SQuAD normalization, with a 100-item manual audit.
-- **Calls:** 800 × 3 models × (4 arms BM25 + 2 arms dense T/E) = 14,400 generations. At ~50 tokens each, ~720k output tokens; on a 24GB GPU with vLLM, roughly 1–3 hours; cost **<$30**, well within the $70 budget.
+- **Calls:** 800 × 3 models × (4 arms BM25 + 2 arms dense T/E) = 14,400 generations. At ~50 tokens each, ~720k output tokens; on a 24GB GPU with vLLM, roughly 1–3 hours; cost **<$30**, well within the $50 budget.
 - **Optional replication:** 200 TriviaQA questions × 3 models × 4 arms = 2,400 calls; <$10. This buys a second dataset, not more power.
 - **Pre-run gate:** 100-item symmetric-prompt check on one model. If `τ < 10pp` under the symmetric prompt, stop and redesign; do not spend the full N=800.
 

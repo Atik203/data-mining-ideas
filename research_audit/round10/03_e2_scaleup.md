@@ -2,7 +2,7 @@
 
 **Date:** 8 November 2026  
 **Basis:** `round9/pilot_idea5.md`, `round9/05_idea5_cto.md`, `round8/06_deep_empirical_85.md`, `round9/FINAL_SURVIVORS_REVIEW.md`. CPU-only gate; no model runs, no paid API, no pilot re-run.  
-**Decision:** **GO, staged, hard cap $70.** NO-GO to a “universal law” or model-ranking claim unless the slope replicates and the recovery half-life is identifiable.
+**Decision:** **GO, staged, hard cap $50.** NO-GO to a “universal law” or model-ranking claim unless the slope replicates and the recovery half-life is identifiable.
 
 ---
 
@@ -12,7 +12,7 @@
 - **Slope power:** MDE **0.20 logit/level per model** at N=800 (OR 1.22), 80% power, α=.05 two-sided; pooled across models ≤0.15 (conservative 0.20). The pilot-implied b≈0.8 is ~4× the MDE, so the slope test has >99% power if the pilot direction survives real prefixes.
 - **Recovery power:** with a 20% switch rate at s=3, 160 switchers/model; 95% CI on t½ **±20% per model, ±11% pooled**. Between-model and between-severity t½ differences need **32–50%**; the study estimates a half-life, it does not rank models.
 - **Harvest supply is not the risk:** the public τ-bench historical trajectories contain **13,605** candidate post-tool decision points; after excluding profile/PII tools and retaining observations whose values appear in the donor’s continuation (value-used proxy), **6,554** remain across all **165** task–domain pairs (min 7, median 38; airline median 31). A cap of 10/task yields 1,646; the airline arm is the binding constraint (50 tasks × 10 = 496 max, enough for 400). 800 is feasible.
-- **Cost:** 35–45 GPU-hours on a 24GB rental (**$15–22**), storage **$2–3**, contingency **$3–5**; **base $23, hard cap $70**. Human labeling is done by the team at no cash cost.
+- **Cost:** 35–45 GPU-hours on a 24GB rental (**$15–22**), storage **$2–3**, contingency **$3–5**; **base $23, hard cap $50**. Human labeling is done by the team at no cash cost.
 - **Gates:** G0 harvest ≥880 eligible + 40-item audit ≥90%; G1 calibration parse ≥95%, placebo jitter ≤20%, s=3 switch 10–80%; G2 stop at $22/45 GPU-hours; G3 slope replicated in ≥2/3 models; G4 ≥50% recovery events and exponential not rejected.
 
 ---
@@ -256,7 +256,7 @@ Average prompt ≈2,500 tokens (system policy + history + observation); output �
 
 - 24GB RTX 3090/4090 community instance, AWQ 4-bit, vLLM, batch 8–16, 8–12k context.
 - Estimated 35–45 GPU-hours (prefill+decode+1.5× overhead). At $0.30–0.50/h: **$12–22**.
-- If only a $0.89/h secure 4090 is available, cap at 30 GPU-hours ($26.7) and reduce N to 600 or drop the persistent arm; still ≥500 prefixes. The hard cap is $70, not a target.
+- If only a $0.89/h secure 4090 is available, cap at 30 GPU-hours ($26.7) and reduce N to 600 or drop the persistent arm; still ≥500 prefixes. The hard cap is $50, not a target.
 
 ### 6.3 Cash
 
@@ -266,7 +266,7 @@ Average prompt ≈2,500 tokens (system policy + history + observation); output �
 | Storage/egress | 60GB weights + logs | $2–3 |
 | Annotation | 200 judgments, team members | $0 |
 | Contingency | GPU/storage overrun | $3–5 |
-| **Total** | base assumes $18 GPU, $2 storage, $3 contingency | **$23 base / $70 cap** |
+| **Total** | base assumes $18 GPU, $2 storage, $3 contingency | **$23 base / $50 cap** |
 
 No paid API, no second GPU, no HF download in this CPU gate. The rental downloads the three open-weight models once; storage/bandwidth is included.
 
@@ -324,19 +324,19 @@ A flat slope (β≤0.1) in all models; a negative slope; placebo jitter >20%; s=
 
 **Deliverables:** (i) CTO-800, a fixed-prefix counterfactual observation dataset with perturbation records, real outputs, continuations, and recovery traces; (ii) a confirmatory paper on content sensitivity and recovery, with a pre-registered analysis. If the slope is null, the dataset and the null are still publishable; if the slope replicates, the paper’s claim is the graded content-sensitivity law, not a universal constant.
 
-**Study elapsed:** 2–3 weeks full-time; **cash $23 base, $70 cap**.
+**Study elapsed:** 2–3 weeks full-time; **cash $23 base, $50 cap**.
 
 ---
 
 ## 10. Final decision (≤300 words)
 
-**GO, staged, hard cap $70; NO-GO to a universal law or model-ranking claim.**
+**GO, staged, hard cap $50; NO-GO to a universal law or model-ranking claim.**
 
 **Design.** 800 real τ-bench prefixes (400 airline, 400 retail; from 1,980 public donor trajectories), 3 open-weight 7–8B models (Qwen2.5-7B, Mistral-7B-v0.3, Llama-3.1-8B), 5 arms: verbatim JSON anchor, faithful prose s=0, non-critical s=1, critical s=2, critical+contradiction s=3. Same prose format across s=0…3; paired within prefix; 4-step recovery; transient primary, persistent 25%. Primary estimand: conditional-logistic slope b_m of content switch on severity; secondary silent propagation; recovery t½ from a discrete exponential.
 
 **MDE.** N=800 gives 0.20 logit/level per model (OR 1.22), 80% power; pooled ≤0.15; pilot-implied b≈0.8 gives >99% power. Recovery with 160–240 s=3 switchers: per-model t½ 95% CI ±16–20%, pooled ±9–11%; between-model/severity differences need 32–50%, so no ranking claim.
 
-**Cost.** 35–45 GPU-hours on a 24GB rental ($15–22), $2–3 storage, $0 annotation (team), $23 base/$70 cap; no paid API.
+**Cost.** 35–45 GPU-hours on a 24GB rental ($15–22), $2–3 storage, $0 annotation (team), $23 base/$50 cap; no paid API.
 
 **Gates.** G0 harvest ≥880 eligible, ≥440/domain before audit and ≥400/domain after audit, 40-item audit ≥90%; G1 parse ≥95%, jitter ≤20%, s=3 switch 10–80%; G2 stop at $22/45h; G3 slope replicated in ≥2/3 models; G4 ≥50% recovery events and exponential not rejected.
 

@@ -30,7 +30,7 @@ Read `round9/pilot_idea8_realcorpus.md`. Rewrite the claim set to randomized ret
 
 ## Task C — E2 scale-up gate
 
-Read `round9/pilot_idea5.md`. Design the confirmatory study: ≥500 real prefixes, real tool outputs, 4 severity levels, multiple models/tasks. Give power/MDE for the dose-response slope and recovery half-life, prefix-harvest protocol, label validation, compute/cash. Decide GO/NO-GO under $70 and a 24GB rental. Output `round10/03_e2_scaleup.md`.
+Read `round9/pilot_idea5.md`. Design the confirmatory study: ≥500 real prefixes, real tool outputs, 4 severity levels, multiple models/tasks. Give power/MDE for the dose-response slope and recovery half-life, prefix-harvest protocol, label validation, compute/cash. Decide GO/NO-GO under $50 and a 24GB rental. Output `round10/03_e2_scaleup.md`.
 
 ## Task D — E1 redesign gate
 

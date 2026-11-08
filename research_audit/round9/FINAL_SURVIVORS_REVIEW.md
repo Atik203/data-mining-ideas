@@ -10,7 +10,7 @@ Ranked by Core; weighted score breaks ties.
 
 | Rank | Idea | Nov | Method | Math | Exp | Data | Q1 | Feas | Compute | Core | Weighted | Indep. | Status |
 |---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 1 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study (E2)** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7 | Gate C: GO staged; 800 real prefixes, 3 models, $70 cap |
+| 1 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study (E2)** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7 | Gate C: GO staged; 800 real prefixes, 3 models, $50 cap |
 | 2 | **The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration (RANKCAL)** | 7.5 | 7.5 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.0 | **6.75** | **7.18** | 8.5 | Directional; N=2,500/TOST next |
 | 3 | **Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence (R1)** | 6.8 | 7.0 | 6.0 | 6.8 | 6.0 | 7.0 | 8.0 | 9.0 | **6.65** | **6.83** | 8.5 | Gate B: conditional measurement paper; claims cut |
 | 4 | **Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay (E1)** | 7.5 | 7.0 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.5 | **6.63** | **7.10** | 9 | Gate D: valid 3-arm factorial; new pilot needed |
@@ -49,7 +49,7 @@ Independently aggregated the 700-row ledger (200 base queries × 3 arms plus 100
 
 Independently recounted N=60: consult 54/60=.90, placebo jitter 0/60, error-vs-reference action switch 5/60=.0833; exact McNemar p=.0625, CI [.013,.153]. The free-text first attempt was correctly discarded because its baseline changed the response format; the fact-matched categorical comparison is the valid pilot. This is a **promising screening signal**, not a confirmed dose-response law. Scale to hundreds of real prefixes and multiple severity levels.
 
-**Gate C scale-up design (8 Nov):** GO, staged, hard cap $70. 800 real τ-bench prefixes (400 airline, 400 retail), 3 open-weight 7–8B models, 5 observation arms (verbatim JSON anchor + s=0…3 prose), 4-step recovery. MDE 0.20 logit/level per model at N=800 (OR 1.22); pooled ≤0.15; the pilot-implied b≈0.8 gives >99% power. Recovery t½ CI ±16–20% per model, ±9–11% pooled; model/severity ranking needs 32–50% and is out of scope. Harvest supply is measured: 6,554 eligible value-used prefixes across 165 task–domain pairs. Cost $23 base/$70 cap. The claim is a bounded content-sensitivity and recovery result, not a universal law.
+**Gate C scale-up design (8 Nov):** GO, staged, hard cap $50. 800 real τ-bench prefixes (400 airline, 400 retail), 3 open-weight 7–8B models, 5 observation arms (verbatim JSON anchor + s=0…3 prose), 4-step recovery. MDE 0.20 logit/level per model at N=800 (OR 1.22); pooled ≤0.15; the pilot-implied b≈0.8 gives >99% power. Recovery t½ CI ±16–20% per model, ±9–11% pooled; model/severity ranking needs 32–50% and is out of scope. Harvest supply is measured: 6,554 eligible value-used prefixes across 165 task–domain pairs. Cost $23 base/$50 cap. The claim is a bounded content-sensitivity and recovery result, not a universal law.
 
 ### RANKCAL — apparent ranking shift not significant at pilot size
 
@@ -68,7 +68,7 @@ Fresh run of the saved analyzer on `results_i04.csv`: baseline native=.518, roma
 ## Recommendation
 
 1. **No surviving idea is currently a verified 8+ paper.** T1’s mean-radius theorem is now **killed**; its surviving non-identifiability/\(\bar p\) mechanism is a ~5.6/6.2 measurement note, not the lead.
-2. **Best current paper: E2 (7.38/7.55)** — Gate C passes as a staged GO: 800 real prefixes, 3 open-weight 7–8B models, 5 arms, MDE 0.20 logit/level, $23 base/$70 cap.
+2. **Best current paper: E2 (7.38/7.55)** — Gate C passes as a staged GO: 800 real prefixes, 3 open-weight 7–8B models, 5 arms, MDE 0.20 logit/level, $23 base/$50 cap.
 3. **Next: RANKCAL (6.75/7.18)** with N=2,500 and TOST, and **R1 (6.65/6.83)** scoped to randomized retrieval lift. R1’s contamination/twin/conflict claims are removed.
 4. **Tool-IV (6.63/6.98)** is conditional: hard tasks, corrected sharp bounds, and a placebo-nudge exclusion check before any GPU spend.
 5. **E1 (6.63/7.10): run the new 3-arm factorial** (PS/FC/RR) before scaling; Gate D’s MDEs are β_a=.076, β_k=.060, Δ=.084.

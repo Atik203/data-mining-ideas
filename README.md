@@ -1,7 +1,7 @@
 # Data-Mining Research Ideas — 2026
 
 **Course track:** data mining / LLM evaluation and measurement  
-**Team:** 3–4 people · 6–7 months · local RTX 3060 6 GB · 24 GB rental available · public data · ≤ $70 cash  
+**Team:** 3–4 people · 4-5 months · local RTX 3060 6 GB · 24 GB rental available · public data · ≤ $50 cash  
 **Target:** a good Q1 paper. A 7+ paper is a strong outcome; 8+ only if genuinely verified.
 
 This repository is the **data-mining track**: LLM evaluation and measurement, agent reliability, retrieval, calibration, multilingual transfer, and data-mining methods.
@@ -23,7 +23,7 @@ This repository is the **data-mining track**: LLM evaluation and measurement, ag
 
 | Rank | ID | Title | Nov | Method | Math | Exp | Data | Q1 | Feas | Compute | Core | Weighted | Indep. | Decision |
 |---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 1 | E2 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7.0 | **GO, staged** — 800 real τ-bench prefixes, 3×7–8B, 5 arms, $23/$70 |
+| 1 | E2 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7.0 | **GO, staged** — 800 real τ-bench prefixes, 3×7–8B, 5 arms, $23/$50 |
 | 2 | RANKCAL | **The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration** | 7.5 | 7.5 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.0 | **6.75** | **7.18** | 8.5 | **GO, conditional** — 2,500 MMLU + TOST ±.03 |
 | 3 | R1 | **Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence** | 6.8 | 7.0 | 6.0 | 6.8 | 6.0 | 7.0 | 8.0 | 9.0 | **6.65** | **6.83** | 8.5 | **GO, conditional** — N=800 measurement paper |
 | 4 | E1 | **Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay** | 7.5 | 7.0 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.5 | **6.63** | **7.10** | 9.0 | **Redesign done** — run the new 3-arm factorial |

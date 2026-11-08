@@ -9,7 +9,7 @@
 
 ## Bottom line
 
-**Best executable main-track paper: E2 — fixed-prefix tool-observation sensitivity (Core 7.38 / Weighted 7.55).** It has a real causal estimand, a screening pilot, a harvested supply of 6,554 eligible real prefixes, a 0.20-logit MDE at N=800, and a hard cash cap of $70. It is a **7.4 paper with an 8+ path**, not a verified 8+ paper.
+**Best executable main-track paper: E2 — fixed-prefix tool-observation sensitivity (Core 7.38 / Weighted 7.55).** It has a real causal estimand, a screening pilot, a harvested supply of 6,554 eligible real prefixes, a 0.20-logit MDE at N=800, and a hard cash cap of $50. It is a **7.4 paper with an 8+ path**, not a verified 8+ paper.
 
 **The theory lead is gone.** T1's mean-semantic-radius phase-transition theorem is false as formulated; the surviving surface-change mechanism is pre-empted by Wang et al. (NeurIPS 2026) and is now a **5.63 / 6.18** measurement note. Do not run the old 7B phase-boundary experiment.
 
@@ -21,7 +21,7 @@
 
 | Rank | ID | Title | Nov | Method | Math | Exp | Data | Q1 | Feas | Compute | Core | Weighted | Indep. | Gate verdict |
 |---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 1 | E2 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7.0 | **GO, staged** — 800 real prefixes, 3 models, 5 arms; $23 base / $70 cap |
+| 1 | E2 | **Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study** | 8.0 | 7.5 | 7.5 | 6.5 | 7.0 | 7.0 | 8.5 | 9.0 | **7.38** | **7.55** | 7.0 | **GO, staged** — 800 real prefixes, 3 models, 5 arms; $23 base / $50 cap |
 | 2 | RANKCAL | **The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration** | 7.5 | 7.5 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.0 | **6.75** | **7.18** | 8.5 | **GO, conditional** — 2,500 MMLU items; paired DeLong + TOST ±0.03 |
 | 3 | R1 | **Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence** | 6.8 | 7.0 | 6.0 | 6.8 | 6.0 | 7.0 | 8.0 | 9.0 | **6.65** | **6.83** | 8.5 | **GO, conditional** — bounded measurement paper; N=800; invalid claims cut |
 | 4 | E1 | **Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay** | 7.5 | 7.0 | 6.5 | 5.5 | 7.0 | 7.0 | 8.5 | 9.5 | **6.63** | **7.10** | 9.0 | **REDESIGN DONE** — run the new 3-arm factorial; current pilot is confounded |
@@ -39,7 +39,7 @@ Arithmetic examples: E2 Core = (8.0+7.5+7.5+6.5)/4 = 7.375 → 7.38. R1 Core = (
 |---|---|---|---|---|---|
 | **A** | T1 | Watermark Survival Under Paraphrase: Surface Change, Not Semantic Distance | **WEAKEN / STOP theory** | Mean-radius $\rho_c(\delta,n)$ is killed by a mixture attack; the missing $\eta=\eta(\rho)$ lemma is false; the $\chi^2$ proof is invalid; the threshold is negative at $n=200$; Wang et al. (NeurIPS 2026) pre-empts the retained-signal threshold. Only the $\bar p$ surface-change mechanism survives (fits 4/5 pilot arms, $\eta_c\approx0.39$). | **5.63 / 6.18** |
 | **B** | R1 | Causal Retrieval Lift: Separating Retrieved Evidence from Answer Presence | **CONDITIONAL GO** | Keep only the randomized retrieval-lift estimand, answer-presence decomposition, and random-passage penalty. Drop contamination, twin/conflict, Manski, and minimax claims. The 74% twin result is model compliance, not construction validity. N=800 gives 5.5pp MDE for $\tau$. | **6.65 / 6.83** |
-| **C** | E2 | Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study | **GO, staged** | 800 real $\tau$-bench prefixes (400 airline / 400 retail), 3 open-weight 7–8B models, 5 observation arms, 4-step recovery. MDE 0.20 logit/level per model; pooled ≤0.15; pilot-implied $b\approx0.8$. 6,554 eligible prefixes across 165 task–domain pairs. $23 base / $70 cap. | **7.38 / 7.55** *(stands until data)* |
+| **C** | E2 | Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study | **GO, staged** | 800 real $\tau$-bench prefixes (400 airline / 400 retail), 3 open-weight 7–8B models, 5 observation arms, 4-step recovery. MDE 0.20 logit/level per model; pooled ≤0.15; pilot-implied $b\approx0.8$. 6,554 eligible prefixes across 165 task–domain pairs. $23 base / $50 cap. | **7.38 / 7.55** *(stands until data)* |
 | **D** | E1 | Constraint Age or Constraint Load? Separating Two Causes of Multi-Turn Instruction Decay | **REDESIGN DONE** | The pilot confounds constraint age with active load: turn FE cuts $\lambda$ from .461/.481 to .257/.333, and both clustered CIs cross zero. New 3-arm × 3-family × 60-dialogue × 8-turn factorial: PS (age only), FC (load only), RR (age⊥load, $r=-.03$). MDE $\beta_a=.076$, $\beta_k=.060$, $\Delta=.084$. | **6.63 / 7.10** |
 | **E** | RANKCAL | The Ranking Cost of Instruction Tuning: Quality Beyond Accuracy and Calibration | **GO, conditional** | 2,500 MMLU items; Qwen2.5-7B base/Instruct + Llama-3.1-8B replication; four pre-registered MMLU groups; paired DeLong + TOST ±0.03. MDE 0.028 item-level, 0.036 cluster-robust. Equivalence is publishable as a null paper. | **6.75 / 7.18** |
 | **E** | Tool-IV | The Causal Effect of Tool Use on Answer Accuracy: A Randomized Encouragement Study | **GO, conditional** | Calibration (400 items, $p_0=0.60$–$0.70$, $\gamma\ge0.35$), then 4,500 calls on hard tasks; 3 arms C/P/T; correct BP LP. MDE LATE 0.089 at $\gamma=.50$. Stop if $\gamma<.35$, placebo $|\delta|>.06$, or LATE CI includes 0 with upper $<.10$. | **6.63 / 6.98** |
@@ -60,7 +60,7 @@ Run **Tool-Observation Sensitivity in Language-Model Agents** (E2) as the main p
 3. **Main run (35–45 GPU-h, $15–22):** 34,800 generations on a 24GB rental; stop at $22 or 45 GPU-h.
 4. **Labels + analysis (~1 week):** 160-item double-coding, κ≥.80; conditional-logit slope; recovery half-life.
 
-**Cash:** $23 base, **$70 hard cap**. No paid API. If only a $0.89/h secure 4090 is available, cap at 30 GPU-h and reduce N to 600.
+**Cash:** $23 base, **$50 hard cap**. No paid API. If only a $0.89/h secure 4090 is available, cap at 30 GPU-h and reduce N to 600.
 
 ### Fallback: The Ranking Cost of Instruction Tuning (RANKCAL)
 

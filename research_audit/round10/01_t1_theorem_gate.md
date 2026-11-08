@@ -310,7 +310,7 @@ Test the **mechanism**, not the original phase transition: (i) does \(r=1-\bar p
 | Mixture audit | λ∈{0, .25, .5, .75, 1} of L4 mixed with identity, applied to clean **and** watermarked | 400 per λ at (δ=2,n=200) |
 | Null-closed clean | all five levels, same paraphraser | 400 per n |
 
-**Stage 1 (mechanism, ~8,000 texts, <$20):** anchors (2 arms × 400 watermarked + 400 clean per n, n=200) + mixture audit (λ∈{.25,.5,.75} × 400 × clean/wm, reusing L0/L4) + L0–L4 at δ=2,n=200 (400 wm + 400 clean per level). **Stage 2 (boundary, ~8,000 texts, <$30):** the remaining three (δ,n) cells × L0–L4, N=400, plus the n=400 clean arm. Grand total ~16,000 texts, ~25–35 GPU-hours on a 24 GB card, <$50 (within $70). Paraphraser: 7B at fixed temperature, max_new_tokens 1.2× source, no truncation; regenerate if cut. Detector: green-count z-test, γ=0.5, α=0.05, fixed pre-registered key; second key on a 100-text subsample for key sensitivity. Human validation: 100 texts/arm, 2 annotators, 5-point meaning score, κ≥0.6. Encoders: MiniLM (continuity) + BGE (robustness); report both, plus the 95th-percentile distance.
+**Stage 1 (mechanism, ~8,000 texts, <$20):** anchors (2 arms × 400 watermarked + 400 clean per n, n=200) + mixture audit (λ∈{.25,.5,.75} × 400 × clean/wm, reusing L0/L4) + L0–L4 at δ=2,n=200 (400 wm + 400 clean per level). **Stage 2 (boundary, ~8,000 texts, <$30):** the remaining three (δ,n) cells × L0–L4, N=400, plus the n=400 clean arm. Grand total ~16,000 texts, ~25–35 GPU-hours on a 24 GB card, <$50 (within $50). Paraphraser: 7B at fixed temperature, max_new_tokens 1.2× source, no truncation; regenerate if cut. Detector: green-count z-test, γ=0.5, α=0.05, fixed pre-registered key; second key on a 100-text subsample for key sensitivity. Human validation: 100 texts/arm, 2 annotators, 5-point meaning score, κ≥0.6. Encoders: MiniLM (continuity) + BGE (robustness); report both, plus the 95th-percentile distance.
 
 ### 9.3 Estimands and analysis
 
@@ -342,7 +342,7 @@ Predicted boundaries (τ=1, \(r=1-\bar p\)): \(\bar p_{50}=0.39\) (δ2,n200), 0.
 5. **Boundary rejected:** \(\bar p_{50}\) ordering reversed, or outside the predicted value by >0.15 in ≥2 cells. The corrected threshold law is wrong; stop the theory claim.
 6. **Phenomenon fails:** L4 (\(\bar p\ge0.8\)) detection >0.5 at δ=2,n=200. The pilot's collapse does not replicate; kill the robustness phenomenon.
 7. **Manipulation invalid:** human meaning preservation <80% at L2/L3, or encoder separation AUC <0.8. The \(\rho\) axis is invalid; stop and redesign.
-8. **Budget:** >$70 or >30 GPU-hours before Stage 1 completes. Cut Stage 2, not the anchors or the mixture audit.
+8. **Budget:** >$50 or >30 GPU-hours before Stage 1 completes. Cut Stage 2, not the anchors or the mixture audit.
 
 ### 9.6 What the experiment can and cannot show
 

@@ -106,7 +106,7 @@ InfoNCE fix: final-token hidden state → projection head (d→256→128, discar
 
 Runs: 4 seed-matched seeds (42, 1234, 2024, 3407) × {A, B, P} = **12 core runs**; +4 B.3 runs conditional on B−A ≥ 2 pp at interim. Size curve: A only at 500 and 1,500 train items, 2 seeds each = **4 runs**. Generality: Llama-3.1-8B, A/B, 2 seeds = **4 runs** (priority 3). Total **20 planned, 24 worst case**.
 
-GPU: 7B 4-bit LoRA, 4,500 items × 2 scripts × 3 epochs = 27k steps/run at ~0.25–0.4 s → 2–3 h/run. Core+curve ≈ 32–48 GPU-h; +B.3 +Llama ≈ 52–76 GPU-h. At $0.30–0.45/h → **$16–34**. Fits the 24GB / $70 envelope with margin for one rerun.
+GPU: 7B 4-bit LoRA, 4,500 items × 2 scripts × 3 epochs = 27k steps/run at ~0.25–0.4 s → 2–3 h/run. Core+curve ≈ 32–48 GPU-h; +B.3 +Llama ≈ 52–76 GPU-h. At $0.30–0.45/h → **$16–34**. Fits the 24GB / $50 envelope with margin for one rerun.
 
 ---
 
@@ -175,7 +175,7 @@ The 30/30 AI check certifies only that `fix_roman.py` is deterministic and schem
 | **G2 degeneracy** | Dev native accuracy >92% or <45% at 4,500 | **STOP evaluation.** Rebalance difficulty (add hard items / reduce epochs); test numbers from a degenerate operating point are uninterpretable. |
 | **G3 alignment** | B−A ≤0, or placebo P−A ≥ 0.5·(B−A) | **STOP the method claim.** Publish gap + failed alignment + placebo. Do not run B.3 or the 6th seed. |
 | **G4 base** | Zero-shot 7B (no LoRA) gap <1 pp | **STOP.** The phenomenon is a small-model artifact; publish the scale result. |
-| **G5 budget** | 80 GPU-h or $70 reached | Drop in priority order: Llama → B.3 → 6th seed. Never drop P (placebo) or the 4th seed. |
+| **G5 budget** | 80 GPU-h or $50 reached | Drop in priority order: Llama → B.3 → 6th seed. Never drop P (placebo) or the 4th seed. |
 | **G6 construct** | Human-written romanization gap differs from R1 by >5 pp or reverses sign | Demote R1 to a control; make human-written the primary rendering, or report the construct failure. |
 
 The interim look is used only for **variance components** (π_d, ICC, σ_seed) to lock N; it is not used to choose the hypothesis. The futility stop in G1 is a program decision, not a hypothesis test, and is reported as exploratory.
@@ -221,6 +221,6 @@ The interim look is used only for **variance components** (π_d, ICC, σ_seed) t
 
 **Power.** With 3,600 test items (design effect 1.25–1.35, n_eff≈2,800) the gap has MDE90 = 3.4–3.9 pp. The alignment gain (4 seeds, between-seed SD 1.5–2.0 pp) has MDE90 = 3.6–4.8 pp. The R1/R2/R3 contrast has ~3 pp MDE; per-task gaps are descriptive (MDE ~6 pp). The pilot's honest gap CI is [0.4, 25] pp — it cannot estimate magnitude.
 
-**Stop.** G0 native review fails (>2% label-changing ambiguity) → no GPU. G1 interim gap <2 pp → publish scale-closure, stop method. G2 dev accuracy outside 45–92% → fix difficulty. G3 B−A ≤0 with placebo matching → stop alignment. G4 zero-shot 7B gap <1 pp → small-model artifact. Hard cap 80 GPU-h / $70.
+**Stop.** G0 native review fails (>2% label-changing ambiguity) → no GPU. G1 interim gap <2 pp → publish scale-closure, stop method. G2 dev accuracy outside 45–92% → fix difficulty. G3 B−A ≤0 with placebo matching → stop alignment. G4 zero-shot 7B gap <1 pp → small-model artifact. Hard cap 80 GPU-h / $50.
 
 **Path.** Corpus + native audit (team-run) → 5 h interim (6 runs) → 10-run confirmation (~$15) → mechanism inference → paper.
