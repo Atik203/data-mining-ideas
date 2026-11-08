@@ -1,7 +1,7 @@
 # Round 10 — Final Main-Track Ranking
 
 **Date:** 8 November 2026  
-**Status:** all six main-track gates complete. **Selected for full experiments: Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study (E2).** The green-computing track is separate: `https://github.com/Atik203/green-computing-ideas`.  
+**Status:** all six main-track gates complete. **Selected for full experiments: Tool-Observation Sensitivity in Language-Model Agents: A Fixed-Prefix Causal Study (E2).**  
 **Scope:** surviving main-track ideas only. Killed ideas are intentionally omitted.  
 **Scoring:** Round-8 eight-factor rubric — Novelty 25%, Method 20%, Math 15%, Experiments 10%, Dataset 10%, Q1 fit 10%, Feasibility 5%, Compute 5%. **Core** = mean of the first four; **Weighted** = all eight. Independence is reported separately. Scores are conservative, evidence-adjusted working estimates, not acceptance probabilities.
 
@@ -88,7 +88,7 @@ If E2's G0/G1 fails (prefix supply, construct validity, or calibration ceiling),
 | Tool-IV | later | ~$10–15 | 6–8 h | γ≥.35, placebo |δ|≤.06 |
 | M1 | later | ~$340–355 | 52–76 h | native audit passes |
 
-**Rule:** rent the 24GB GPU only after G0/G1 (E2) or the calibration stage (RANKCAL/Tool-IV) passes. The local 3060 is for pilots and green experiments, not for the main 7B run.
+**Rule:** rent the 24GB GPU only after G0/G1 (E2) or the calibration stage (RANKCAL/Tool-IV) passes. The local 3060 is for pilots and small-scale experiments, not for the main 7B run.
 
 ---
 
@@ -103,10 +103,6 @@ If E2's G0/G1 fails (prefix supply, construct validity, or calibration ceiling),
 - `ideas/bangla-script-transfer.md` — Bangla Across Scripts (M1)
 
 Each page uses the same sections: **What / Why / How / Dataset / Method / Expected / Results / Outcome**.
-
-## Green track
-
-The green-computing shortlist, ranking, and post-pilot recommendation are in `https://github.com/Atik203/green-computing-ideas`. **Certified Carbon-Aware Quantization and Sparsity Allocation (G3) was killed by its pilot** (NF4 energy loss, no feasible mix at \(0.8\times\)FP16, additive \(R^2\) fail). The provisional green lead is now **Certified Energy-Normalized Data Selection for Instruction Tuning (G4, 7.50/7.78)**, pending its pilot; **Energy-Optimal Retrieval Depth (G2, 7.00/7.35)** is **MARGINAL** (static 2pp claim killed; 5pp margin PASS at \(k=4\), 69.3% savings), and **Carbon per Correct Answer (G5, 7.00/7.03)** is the other 7.0 fallback.
 
 ## Evidence
 

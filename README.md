@@ -4,7 +4,7 @@
 **Team:** 3–4 people · 6–7 months · local RTX 3060 6 GB · 24 GB rental available · public data · ≤ $70 cash  
 **Target:** a good Q1 paper. A 7+ paper is a strong outcome; 8+ only if genuinely verified.
 
-This repository is the **data-mining track** of a two-track selection package. The green-computing track is separate: **https://github.com/Atik203/green-computing-ideas**.
+This repository is the **data-mining track**: LLM evaluation and measurement, agent reliability, retrieval, calibration, multilingual transfer, and data-mining methods.
 
 ---
 
@@ -81,4 +81,4 @@ No API key, Hugging Face token, or `.env` file is included. The local workspace 
 
 ## Status
 
-Snapshot: **8 November 2026**. All six main-track gates are complete. Green pilots continue in the separate green repository.
+Snapshot: **8 November 2026**. All six main-track gates are complete; E2 is selected for full experiments.
